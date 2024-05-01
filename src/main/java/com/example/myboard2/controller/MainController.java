@@ -17,7 +17,7 @@ public class MainController {
               this.articleService = articleService;
        }
        
-       @GetMapping("/main")
+       @GetMapping("/")
        public String main (Model model){
               List<ArticleDto> list = articleService.findAll();
               model.addAttribute("dto",list);
