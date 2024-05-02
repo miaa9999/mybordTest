@@ -3,7 +3,6 @@ package com.example.myboard2.service;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.IntStream;
 
 @Service

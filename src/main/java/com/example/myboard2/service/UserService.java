@@ -6,7 +6,6 @@ import com.example.myboard2.repository.UserAccountRepository;
 import com.example.myboard2.vo.UserRole;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
-import jakarta.validation.constraints.Size;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

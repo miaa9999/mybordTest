@@ -10,10 +10,12 @@
 <div layout:fragment="content" class="content">
     <h4>회원가입</h4>
     <form id="frm" name="frm" class="container" th:action="@{/user/signup}" method="post" th:object="${userCreateForm}">
+<!--        에러 처리하기 Fragment 삽입        -->
+        <div th:replace="~{fragments/form_errors :: formErrorsFragment}"></div>
         <div class="mb3">
             <label class="form-label">사용자 ID</label>
             <input id="username" name="username" type="text" th:field="*{username}" class="form-control">
-            <span th:errors ="*{username}"></span>
+            <span class="error-class" th:errors ="*{username}"></span>
         </div>
         <div class="mb3">
             <label class="form-label">사용자 PASSWORD</label>

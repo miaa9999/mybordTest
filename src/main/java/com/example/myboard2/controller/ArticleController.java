@@ -2,7 +2,6 @@ package com.example.myboard2.controller;
 
 import com.example.myboard2.entity.Article;
 import com.example.myboard2.service.PaginationService;
-import jakarta.websocket.server.PathParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
