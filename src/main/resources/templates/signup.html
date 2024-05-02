@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/default_layout}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div layout:fragment="content" class="content">
+    <h4>회원가입</h4>
+    <form id="frm" name="frm" class="container" th:action="@{/user/signup}" method="post" th:object="${userCreateForm}">
+        <div class="mb3">
+            <label class="form-label">사용자 ID</label>
+            <input id="username" name="username" type="text" th:field="*{username}" class="form-control">
+            <span th:errors ="*{username}"></span>
+        </div>
+        <div class="mb3">
+            <label class="form-label">사용자 PASSWORD</label>
+            <input id="password1" name="password1" type="password" th:field="*{password1}"  class="form-control">
+            <span th:errors ="*{password1}"></span>
+        </div>
+        <div class="mb3">
+            <label class="form-label">PASSWORD CHECK</label>
+            <input id="password2" name="password2" type="password" th:field="*{password2}"  class="form-control">
+            <span th:errors ="*{password2}"></span>
+        </div>
+        <div class="mb3">
+            <label class="form-label">이메일</label>
+            <input id="email" name="email" type="email" th:field="*{email}"  class="form-control">
+            <span th:errors ="*{email}"></span>
+        </div>
+        <div class="mb3">
+            <label class="form-label">닉네임</label>
+            <input id="nickname" name="nickname" type="text" th:field="*{nickname}"  class="form-control">
+            <span th:errors ="*{nickname}"></span>
+        </div>
+        <input type="submit" value="회원가입">
+        <input type="button" value="취소" onclick="check()">
+    </form>
+</div>
+</body>
+
+</html>

@@ -25,3 +25,9 @@ text-align : center;
     margin-right : 200px;
     text-align : center;
 }
+
+.btn_no1{
+ text-decoration: none ;
+ color : #292929 ;
+ font-size : 15px;
+ }
