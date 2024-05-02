@@ -16,18 +16,24 @@
                     <li class="nav-item">
                         <a class="nav-link"th:href="@{/articles/paging}">list</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Pricing</a>
+
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                    <li class="nav-item" sec:authorize="hasRole('ADMIN')">
+                        관리자 권한이 있습니다
                     </li>
+                    <li class="nav-item" sec:authorize="hasRole('USER')">
+                        사용자 권한이 있습니다
+                    </li>
+
                 </ul>
             </div>
             <div class="text-end">
-                <a role="button" id="signup" th:href="@{/user/signup}" class="btn_no1"> 회원가입 </a>
-                <a role="button" id="login"   th:href="@{/user/login}" class="btn_no1"> 로그인 </a>
-                <a role="button" id="logout"  th:href="@{/logout}" class="btn_no1"> 로그아웃 </a>
+                <a role="button" id="signup" th:href="@{/user/signup}"
+                   sec:authorize="isAnonymous()" class="btn_no1"> 회원가입 </a>
+                <a role="button" id="login"   th:href="@{/user/login}"
+                   sec:authorize="isAnonymous()" class="btn_no1"> 로그인 </a>
+                <a role="button" id="logout"  th:href="@{/logout}"
+                   sec:authorize="isAuthenticated()" class="btn_no1"> 로그아웃 </a>
             </div>
         </div>
     </nav>
