@@ -9,14 +9,14 @@
 <body>
 <div layout:fragment="content" class="content">
     <h4>로그인</h4>
-    <form id="frm" name="frm" class="container" th:action="@{/login}" method="post" th:object="${userCreateForm}">
+    <form id="frm" name="frm" class="container" th:action="@{/login}" method="post" >
         <div class="mb3">
             <label class="form-label">사용자 ID</label>
-            <input id="username" name="username" type="text" th:field="*{username}" class="form-control">
+            <input id="username" name="username" type="text"  class="form-control">
         </div>
         <div class="mb3">
             <label class="form-label">사용자 PASSWORD</label>
-            <input id="password" name="password" type="password" th:field="*{password1}"  class="form-control">
+            <input id="password" name="password" type="password"  class="form-control">
         </div>
         <input type="submit" value="로그인">
     </form>
